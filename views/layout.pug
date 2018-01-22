@@ -1,0 +1,49 @@
+doctype html
+html
+  head
+    title= title
+   
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    link(rel='stylesheet',   href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css', integrity='sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ', crossorigin='anonymous')
+    link(rel='stylesheet',   href='/stylesheets/style.css')
+   
+
+    script(src="https://use.fontawesome.com/878a36837e.js")
+    
+  body.container-fluid 
+
+   nav.navbar.navbar-toggleable-md.main-nav.pOff
+     button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarNavAltMarkup', aria-controls='navbarNavAltMarkup', aria-expanded='false', aria-label='Toggle navigation')
+       span.navbar-toggler-icon
+     #navbarNavAltMarkup.navbar-collapse.collapse
+       ul.nav.nav-tabs.nav-fill.mr-auto.dash-nav-width.text-center
+         li.nav-item
+           a.nav-link.dash-link-block#brand(data-toggle="tab" href="#brand-manager" role="tab" aria-controls="brand-manager" aria-selected="true") 
+            |TO DO list 
+           span.sr-only (current)
+         li.nav-item
+           a.nav-link.dash-link-block#Game(data-toggle="tab" href="#Gamer" role="tab" aria-controls="Gamer" aria-selected="true") Add a reminder
+         li.nav-item
+           a.navbar-brand(href='#')  
+             img(src="/images/lh_logo.png")
+         li.nav-item
+           a.nav-link.dash-link-block(href='#') Search
+         li.nav-item
+           a.nav-link.dash-link-block(href='#') Account 
+
+       ul.navbar-nav.link-block-4
+         li.nav-item.link-block-4-item.text-center.half-length
+           a.nav-link(href='#' type="button" data-toggle="modal" data-target="#exampleModal") 
+            i.fa.fa-cog.log-ico-size(aria-hidden="true")
+         li.nav-item.link-block-4-item-link.text-center.half-length
+           a.nav-link(href='#' type="button" data-toggle="modal" data-target="#exampleModal")
+             i.fa.fa-id-badge.log-ico-size(aria-hidden="true")
+   block content
+
+
+   script(src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous")
+   script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js', integrity='sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh', crossorigin='anonymous')
+   script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js', integrity='sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ', crossorigin='anonymous')
+    
