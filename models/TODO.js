@@ -1,13 +1,8 @@
 var mongoose = require('mongoose');
-
-/* referring mongoose to my local database */ 
-mongoose.connect('mongodb://localhost:27017/TODO');
-
-/* passing the mongoose connection into a db variable */ 
-var TODOdb = mongoose.connection; 
+var Schema = mongoose.schema;
 
 /* creating data model for TODO API */
-var uploadSchema = new mongoose.Schema({
+var taskSchema = new Schema ({
     _id:{
         type: String
     }, 
@@ -15,13 +10,16 @@ var uploadSchema = new mongoose.Schema({
         type: String 
     },
     status:{
+        type: [{
        type: String, 
-       enum: ['','','']
-   },
+       enum: ['pending','ongoing','completed']
+        }],
+           default: ['pending']
+            },
     isDeleted: {
         type: Boolean 
     }
 });
 
-var Upload = module.exports = mongoose.model('myUpload', uploadSchema);
+var Task = module.exports = mongoose.model('Task', taskSchema);
 
