@@ -1,40 +1,15 @@
-var express = require('express');
-var router = express.Router();
-var mongo = require('mongodb').MongoClient; 
-var mongoose =  require('mongoose');
-var assert = require('assert');
-var Task = require('../models/TODO');
+module.exports = function(app) {
 
-/* GET home page. */
-/* retrieve all to dos */
-router.get('/task', function(req, res, next) { 
+var controller = require('../controller/todocontroller');
 
-  res.json();
-  
-});
+app.route('/todo') 
+     .get(controller.list_all_tasks)
+     .post(controller.create_a_task);
+         
+            
+app.route('/todo/:todoId') 
+        .get(controller.read_a_task)
+        .put(controller.update_a_task)
+        .delete(controller.delete_a_task)
 
-/* retrieve all to dos with id: */
-router.get('/todo/:id', function(req, res, next) {
-  res.json();
-});
-
-/* creat a to do */ 
-router.post('/todo', function(req, res, next) {
-   
- 
-    res.json();       
-});
-
-/* edit or update a to do */ 
-router.put('/todo/:id', function(req, res, next) {
-  
-   res.json();
-});
-
-/* edit or update a to do */ 
-router.delete('/todo/:id', function(req, res, next) {
-    
- res.json();
- 
-});
-module.exports = router;
+};
