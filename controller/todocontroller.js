@@ -4,12 +4,11 @@ var toDoList = mongoose.model('Task');
 
 
 exports.list_all_tasks = function(req, res){
- toDoList.find({}, function(err, TODO){
-     if(err)
-         res.send(err);
-         res.json(TODO);
-     
- });       
+     toDoList.find({}, function(err, task) {
+    if (err)
+      res.send(err);
+    res.json(task);
+  });      
 };
 
 exports.create_a_task = function(req, res){

@@ -3,9 +3,8 @@ var Schema = mongoose.Schema;
 
 /* creating data model for TODO API */
 var taskSchema = new Schema ({
-    _id:{
-        type: String
-    }, 
+  
+    
     title:{
         type: String 
     },
